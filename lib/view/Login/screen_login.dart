@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:spendy/view/home/home_screen.dart';
 
 class ScreenLogin extends StatefulWidget {
   const ScreenLogin({
@@ -61,7 +62,7 @@ class _ScreenLoginState extends State<ScreenLogin> {
                   });
                 },
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               TextFormField(
@@ -107,6 +108,27 @@ class _ScreenLoginState extends State<ScreenLogin> {
                   });
                 },
               ),
+              const SizedBox(
+                height: 15,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const ScreenHome()));
+                },
+                style: ElevatedButton.styleFrom(
+                  fixedSize: const Size(400, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(
+                        20), // Adjust the border radius as needed
+                  ),
+                  backgroundColor: const Color.fromARGB(255, 1, 26, 3),
+                ),
+                child: const Text(
+                  "Sign In",
+                  style: TextStyle(color: Colors.white),
+                ),
+              )
             ],
           ),
         ),
