@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spendy/core/themes.dart';
 import 'package:spendy/view/Login/screen_login.dart';
 
 void main() {
@@ -12,10 +13,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(
-              seedColor: const Color.fromARGB(255, 4, 40, 24)),
-          primaryColor: const Color.fromARGB(255, 4, 40, 24)),
+      debugShowCheckedModeBanner: false,
+      theme: Themes.primaryTheme,
       home: const ScreenLogin(),
     );
   }
