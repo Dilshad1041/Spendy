@@ -6,8 +6,16 @@ class ScreenLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [TextFormField()],
+      appBar: AppBar(),
+      body: SafeArea(
+        child: Column(
+          children: [
+            TextFormField(),
+            Container(
+              child: Text("data"),
+            )
+          ],
+        ),
       ),
     );
   }
