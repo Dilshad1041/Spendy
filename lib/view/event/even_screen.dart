@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:spendy/core/event_list.dart';
 
 class ScreenEvent extends StatefulWidget {
-  const ScreenEvent({Key? key}) : super(key: key);
+  const ScreenEvent({super.key});
 
   @override
   State<ScreenEvent> createState() => _ScreenEventState();
@@ -12,6 +12,17 @@ bool isFocused = false;
 String selectedItem = '';
 
 class _ScreenEventState extends State<ScreenEvent> {
+  List<Widget> rows = []; // List to store rows
+  final TextEditingController eventNameController = TextEditingController();
+  final TextEditingController descriptionController = TextEditingController();
+  final TextEditingController nameController = TextEditingController();
+  final TextEditingController quantityController = TextEditingController();
+
+  void printdetails() {
+    print(eventNameController.text);
+    print(descriptionController.text);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +57,7 @@ class _ScreenEventState extends State<ScreenEvent> {
             },
             onSelected: (String value) {
               setState(() {
-                selectedItem = value;
+                eventNameController.text = value;
               });
             },
             fieldViewBuilder: (BuildContext context,
@@ -56,10 +67,6 @@ class _ScreenEventState extends State<ScreenEvent> {
               return TextField(
                 controller: textEditingController,
                 focusNode: focusNode,
-                onChanged: (value) {
-                  // Update the autocomplete options based on the entered text
-                  setState(() {});
-                },
                 decoration: InputDecoration(
                   //labelText: 'Select an Option',
                   hintText: "Event Name",
@@ -112,6 +119,7 @@ class _ScreenEventState extends State<ScreenEvent> {
             height: 15,
           ),
           TextFormField(
+            controller: descriptionController,
             decoration: InputDecoration(
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
@@ -144,8 +152,118 @@ class _ScreenEventState extends State<ScreenEvent> {
             },
             maxLines: 5,
           ),
+          const SizedBox(
+            height: 15,
+          ),
+          // ...rows,
+          // buildRow(),
+          ElevatedButton(
+            onPressed: () {
+              setState(() {
+                // rows.add(buildRow()); // Add a new row
+              });
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color.fromARGB(255, 1, 26, 3),
+            ),
+            child: const Text(
+              "+",
+              style: TextStyle(fontSize: 30, color: Colors.white),
+            ), // Button to add more rows
+          ),
+
+          // ElevatedButton(
+          //     onPressed: () {
+          //       printdetails();
+          //     },
+          //     child: Text("hi"))
         ],
       ),
     );
   }
+
+  // Widget buildRow() {
+  //   return Padding(
+  //     padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
+  //     child: Row(
+  //       mainAxisAlignment:
+  //           MainAxisAlignment.spaceBetween, // Align elements evenly
+  //       children: [
+  //         Expanded(
+  //           // Use Expanded to allow the TextFormField to take remaining space
+  //           child: TextFormField(
+  //             controller: nameController,
+  //             decoration: InputDecoration(
+  //               border: OutlineInputBorder(
+  //                 borderRadius: BorderRadius.circular(10),
+  //               ),
+  //               hintText: "Name",
+  //               fillColor: const Color.fromARGB(255, 233, 247, 233),
+  //               filled: true,
+  //               contentPadding: const EdgeInsets.all(10),
+  //               focusedBorder: OutlineInputBorder(
+  //                 borderRadius: BorderRadius.circular(10),
+  //                 borderSide: BorderSide(
+  //                   color: isFocused
+  //                       ? const Color.fromARGB(255, 0, 13, 1)
+  //                       : Colors.transparent,
+  //                   width: 2.0,
+  //                 ),
+  //               ),
+  //             ),
+  //             onTap: () {
+  //               setState(() {
+  //                 isFocused =
+  //                     true; // Update isFocused when TextFormField is tapped
+  //               });
+  //             },
+  //             onEditingComplete: () {
+  //               setState(() {
+  //                 isFocused =
+  //                     false; // Update isFocused when TextFormField loses focus
+  //               });
+  //             },
+  //           ),
+  //         ),
+  //         const SizedBox(width: 10),
+  //         Expanded(
+  //           // Use Expanded to allow the TextFormField to take remaining space
+  //           child: TextFormField(
+  //             controller: quantityController,
+  //             decoration: InputDecoration(
+  //               border: OutlineInputBorder(
+  //                 borderRadius: BorderRadius.circular(10),
+  //               ),
+  //               hintText: "Quantity",
+  //               fillColor: const Color.fromARGB(255, 233, 247, 233),
+  //               filled: true,
+  //               contentPadding: const EdgeInsets.all(10),
+  //               focusedBorder: OutlineInputBorder(
+  //                 borderRadius: BorderRadius.circular(10),
+  //                 borderSide: BorderSide(
+  //                   color: isFocused
+  //                       ? const Color.fromARGB(255, 0, 13, 1)
+  //                       : Colors.transparent,
+  //                   width: 2.0,
+  //                 ),
+  //               ),
+  //             ),
+  //             onTap: () {
+  //               setState(() {
+  //                 isFocused =
+  //                     true; // Update isFocused when TextFormField is tapped
+  //               });
+  //             },
+  //             onEditingComplete: () {
+  //               setState(() {
+  //                 isFocused =
+  //                     false; // Update isFocused when TextFormField loses focus
+  //               });
+  //             },
+  //           ),
+  //         ), // Add space between form fields and button
+  //       ],
+  //     ),
+  //   );
+  // }
 }

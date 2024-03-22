@@ -1,0 +1,23 @@
+dependencies: \
+  /Users/dilshadp/spendy/ios/Runner/GeneratedPluginRegistrant.m \
+  /Users/dilshadp/spendy/ios/Runner/GeneratedPluginRegistrant.h \
+  /Users/dilshadp/spendy/build/ios/Debug-iphonesimulator/Flutter.framework/Modules/module.modulemap \
+  /Users/dilshadp/spendy/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/Flutter.h \
+  /Users/dilshadp/spendy/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterAppDelegate.h \
+  /Users/dilshadp/spendy/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterMacros.h \
+  /Users/dilshadp/spendy/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterPlugin.h \
+  /Users/dilshadp/spendy/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterBinaryMessenger.h \
+  /Users/dilshadp/spendy/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterChannels.h \
+  /Users/dilshadp/spendy/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterCodecs.h \
+  /Users/dilshadp/spendy/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterPlatformViews.h \
+  /Users/dilshadp/spendy/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterTexture.h \
+  /Users/dilshadp/spendy/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterCallbackCache.h \
+  /Users/dilshadp/spendy/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterDartProject.h \
+  /Users/dilshadp/spendy/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterEngine.h \
+  /Users/dilshadp/spendy/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterEngineGroup.h \
+  /Users/dilshadp/spendy/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterHeadlessDartRunner.h \
+  /Users/dilshadp/spendy/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterPluginAppLifeCycleDelegate.h \
+  /Users/dilshadp/spendy/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterViewController.h \
+  /Users/dilshadp/spendy/build/ios/Debug-iphonesimulator/url_launcher_ios/url_launcher_ios.framework/Modules/module.modulemap \
+  /Users/dilshadp/spendy/build/ios/Debug-iphonesimulator/url_launcher_ios/url_launcher_ios.framework/Headers/url_launcher_ios-umbrella.h \
+  /Users/dilshadp/spendy/build/ios/Debug-iphonesimulator/url_launcher_ios/url_launcher_ios.framework/Headers/url_launcher_ios-Swift.h
